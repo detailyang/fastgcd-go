@@ -1,4 +1,3 @@
-
 <p align="center">
   <b>
     <span style="font-size:larger;">fastgcd-go</span>
