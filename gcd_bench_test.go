@@ -11,19 +11,19 @@ func BenchmarkVanillaGCD(b *testing.B) {
 	y := big.NewInt(0)
 	for i := uint64(0); i < uint64(b.N); i++ {
 		x.SetInt64(int64(i))
-		y.SetInt64(int64(i + 1))
+		y.SetInt64(int64(i + uint64(b.N)))
 		z.GCD(nil, nil, x, y)
 	}
 }
 
 func BenchmarkGCD(b *testing.B) {
 	for i := uint64(0); i < uint64(b.N); i++ {
-		GCD(i, i+1)
+		GCD(i, i+uint64(b.N))
 	}
 }
 
 func BenchmarkBinaryGCD(b *testing.B) {
 	for i := uint64(0); i < uint64(b.N); i++ {
-		BinaryGCD(i, i+1)
+		BinaryGCD(i, i+uint64(b.N))
 	}
 }

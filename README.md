@@ -10,13 +10,12 @@
 
 
 ````golang
-╰─λ go test -benchtime 10s -benchmem -bench "." .
-goos: darwin
+╰─λ go test -benchtime 10s -benchmem -bench "." .                                                                                                           goos: darwin
 goarch: amd64
 pkg: github.com/detailyang/fastgcd-go
-BenchmarkVanillaGCD-8   	200000000	       100 ns/op	      16 B/op	       2 allocs/op
-BenchmarkGCD-8          	500000000	        31.5 ns/op	       0 B/op	       0 allocs/op
-BenchmarkBinaryGCD-8    	2000000000	        10.5 ns/op	       0 B/op	       0 allocs/op
+BenchmarkVanillaGCD-8   	100000000	       251 ns/op	      16 B/op	       2 allocs/op
+BenchmarkGCD-8          	100000000	       221 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBinaryGCD-8    	100000000	       146 ns/op	       0 B/op	       0 allocs/op
 PASS
-ok  	github.com/detailyang/fastgcd-go	75.654s
+ok  	github.com/detailyang/fastgcd-go	68.778s
 ````
